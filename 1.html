@@ -1,0 +1,69 @@
+
+
+
+<link type="text/css" href="media/css/ui-lightness/jquery-ui-1.8.21.custom.css" rel="Stylesheet" />	
+<script type="text/javascript" src="media/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="media/js/jquery-ui-1.8.21.custom.min.js"></script>
+
+
+<style>
+	.toggler { width: 500px; height: 200px; }
+	#button { padding: .5em 1em; text-decoration: none; }
+	#effect { width: 240px; height: 135px; padding: 0.4em; position: relative; }
+	#effect h3 { margin: 0;
+padding: 1px;
+width: 12px;
+float: right;
+text-align: center;
+height: 12px;
+font-size: 12px;
+line-height: 8px;
+cursor:pointer; }
+	.right{ text-align:right; }
+	</style>
+	<script>
+	var obj = {
+		text1: "this is text 1"
+	}
+	
+	$(function() {
+		// run the currently selected effect
+		function runEffect(text) {
+			var modal = $('<div id="effect" class="ui-widget-content ui-corner-all"><h3 class="ui-widget-header ui-corner-all right">x</h3> <p id="modal-text">Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede.</p> </div>');
+			modal.appendTo($('body') );
+			
+			// get effect type from 
+			var selectedEffect = "blind";
+
+			// most effect types need no options passed by default
+			var options = {};
+			
+			$('#modal-text', modal).text(text);
+			$( "h3.ui-widget-header", modal ).click(function(){
+				$(this).parent().remove();
+			})
+			// some effects have required parameters
+			if ( selectedEffect === "scale" ) {
+				options = { percent: 100 };
+			} else if ( selectedEffect === "size" ) {
+				options = { to: { width: 280, height: 185 } };
+			}
+
+			// run the effect
+			$( "#effect" ).show( selectedEffect, options, 500 );
+		};
+
+		// set effect from select menu value
+		$( "#button" ).click(function() {
+			text = obj.text1;			
+			runEffect(text);
+			return false;
+		});
+	});
+	</script>
+
+
+
+<div class="demo">
+	<a href="#" id="button" class="ui-state-default ui-corner-all">Run Effect</a>
+</div><!-- End demo -->

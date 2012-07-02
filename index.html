@@ -20,17 +20,53 @@ font-size: 12px;
 line-height: 8px;
 cursor:pointer; }
 	.right{ text-align:right; }
+#overlay{
+	position: absolute;
+	height:100%;
+	background: #E1E1E1;
+	width:  100%;
+	top:0;
+	left:0;
+	}
+	#modal-box{
+		position:relative;
+		width: 200px;
+		margin:0 0 0 220px;
+	}
+	h3.ui-widget-header{padding: 0 5px;
+	margin: 8px;
+	cursor:pointer;
+	float:right;
+}
+	#modal-text{
+		padding:10px
+	}
+	#content-wrap{
+		width:720px;
+		height:600px;
+		position:relative;
+		border:1px solid #333
+	}
+	.text{
+		display:none;
+	}
+	.modal-div{
+		cursor:pointer;
+	}
+	.text-image{
+		display:none;
+	}
 	</style>
 	<script>
-	var obj = {
-		text1: "this is text 1"
-	}
 	
-	$(function() {
+	(function( $ ) {
+	$.fn.pwcModal = function() {
+		// Do your awesome plugin stuff here
+	
 		// run the currently selected effect
-		function runEffect(text) {
-			var modal = $('<div id="effect" class="ui-widget-content ui-corner-all"><h3 class="ui-widget-header ui-corner-all right">x</h3> <p id="modal-text">Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede.</p> </div>');
-			modal.appendTo($('body') );
+		function runEffect(text, img) {
+			var overlay = '<div id="overlay"></div>';
+			var modal = $('<div id="modal-box" class="ui-widget-content ui-corner-all"><h3 class="ui-widget-header ui-corner-all right">x</h3> <p id="modal-text">' + text + '</p> </div>');
 			
 			// get effect type from 
 			var selectedEffect = "blind";
@@ -38,9 +74,13 @@ cursor:pointer; }
 			// most effect types need no options passed by default
 			var options = {};
 			
-			$('#modal-text', modal).text(text);
+			$('#content-wrap').append(overlay, modal);
+			$(img).css('display','block')
+			$('#overlay').append(img);
+			
 			$( "h3.ui-widget-header", modal ).click(function(){
 				$(this).parent().remove();
+				$('#overlay').remove();
 			})
 			// some effects have required parameters
 			if ( selectedEffect === "scale" ) {
@@ -50,20 +90,45 @@ cursor:pointer; }
 			}
 
 			// run the effect
-			$( "#effect" ).show( selectedEffect, options, 500 );
+			$(modal).show( selectedEffect, options, 500 );
 		};
-
+		
 		// set effect from select menu value
-		$( "#button" ).click(function() {
-			text = obj.text1;			
-			runEffect(text);
-			return false;
-		});
-	});
+			$(this).click(function() {
+				var text = $(this).children('.text').html();
+				var img = $(this).children('.text-image').clone();
+				runEffect(text, img);
+				return false;
+			});
+  };
+})( jQuery );
+
+jQuery(document).ready(function(){
+	$('#one').pwcModal();
+	$('#two').pwcModal();
+	$('#three').pwcModal();
+	$('#four').pwcModal();
+	
+})
 	</script>
 
 
 
-<div class="demo">
-	<a href="#" id="button" class="ui-state-default ui-corner-all">Run Effect</a>
+<div id="content-wrap">
+	<div id="one" class="modal-div ui-state-default ui-corner-all">item 1
+		<div class='text'>text for 1</div>
+		<div class='text-image'>image for 1</div>
+	</div>
+	<div id="two" class="modal-div ui-state-default ui-corner-all">item 2
+		<div class='text'>text for 2</div>
+		<div class='text-image'>image for 2</div>
+	</div>
+	<div id="three" class="modal-div ui-state-default ui-corner-all">item 3
+		<div class='text'>text for 3</div>
+		<div class='text-image'>image for 3</div>
+	</div>
+	<div id="four" class="modal-div ui-state-default ui-corner-all">item 4
+		<div class='text'>text for 4</div>
+		<div class='text-image'>image for 4</div>
+	</div>
 </div><!-- End demo -->
