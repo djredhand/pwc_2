@@ -29,9 +29,10 @@ cursor:pointer; }
 	left:0;
 	}
 	#modal-box{
-		position:relative;
+		position: relative;
 		width: 200px;
-		margin:0 0 0 220px;
+		margin: auto auto;
+		top: 20%;
 	}
 	h3.ui-widget-header{padding: 0 5px;
 	margin: 8px;
@@ -42,7 +43,7 @@ cursor:pointer; }
 		padding:10px
 	}
 	#content-wrap{
-		width:720px;
+		width:1233px;
 		height:600px;
 		position:relative;
 		border:1px solid #333
@@ -55,6 +56,16 @@ cursor:pointer; }
 	}
 	.text-image{
 		display:none;
+	}
+	.hide{
+		display:none;	
+	}
+	.popup{
+		cursor:pointer;
+		font-family:Georgia, "Times New Roman", Times, serif
+	}
+	.area{
+		cursor: pointer;	
 	}
 	</style>
 	<script>
@@ -115,20 +126,124 @@ jQuery(document).ready(function(){
 
 
 <div id="content-wrap">
-	<div id="one" class="modal-div ui-state-default ui-corner-all">item 1
-		<div class='text'>text for 1</div>
-		<div class='text-image'>image for 1</div>
-	</div>
-	<div id="two" class="modal-div ui-state-default ui-corner-all">item 2
-		<div class='text'>text for 2</div>
-		<div class='text-image'>image for 2</div>
-	</div>
-	<div id="three" class="modal-div ui-state-default ui-corner-all">item 3
-		<div class='text'>text for 3</div>
-		<div class='text-image'>image for 3</div>
-	</div>
-	<div id="four" class="modal-div ui-state-default ui-corner-all">item 4
-		<div class='text'>text for 4</div>
-		<div class='text-image'>image for 4</div>
-	</div>
-</div><!-- End demo -->
+  <div id="interactive" style="position:relative">
+		<img style="position:absolute" id="img-inter" src="onload.jpg" width="1233" height="702" border="0" usemap="#Map" />
+		<div id="business-value-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+			<div class='text'>text for 1</div>
+			<div class='text-image'>image for 1</div>
+		</div>
+		<div id="hr-outcomes-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+			<div class='text'>text for 1</div>
+			<div class='text-image'>image for 1</div>
+		</div>
+		<div id="talent-strategy-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+			<div class='text'>text for 1</div>
+			<div class='text-image'>image for 1</div>
+		</div>
+		<div id="business-strategy-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+			<div class='text'>text for 1</div>
+			<div class='text-image'>image for 1</div>
+		</div>
+		<div id="pot-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+			<div class='text'>text for 1</div>
+			<div class='text-image'>image for 1</div>
+		</div>
+		<div id="pivotal-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+			<div class='text'>text for pivotal info</div>
+			<div class='text-image'>image for pivotal info</div>
+		</div>
+		<div id="key-skill-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+			<div class='text'>text for 1</div>
+			<div class='text-image'>image for 1</div>
+		</div>
+		<div id="high-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+			<div class='text'>text for 1</div>
+			<div class='text-image'>image for 1</div>
+		</div>
+    <div id="people-processes-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+			<div class='text'>text for 1</div>
+			<div class='text-image'>image for 1</div>
+		</div>
+    
+    <div id="attract-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+			<div class='text'>text for 1</div>
+			<div class='text-image'>image for 1</div>
+		</div>
+    
+    <div id="develop-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+			<div class='text'>text for 1</div>
+			<div class='text-image'>image for 1</div>
+		</div>
+    
+    <div id="retain-reward-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+			<div class='text'>text for 1</div>
+			<div class='text-image'>image for 1</div>
+		</div>
+    
+    <div id="deploy-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+			<div class='text'>text for 1</div>
+			<div class='text-image'>image for 1</div>
+		</div>
+  	<map name="Map" id="Map">
+    	<area class="area" href="#" id="potential-talent" shape="circle" coords="643,181,78"  />
+  	  <area class="area" href="#" id="high-perfomers" shape="circle" coords="478,345,75"/>
+  	  <area class="area" href="#" id="key-skill" shape="circle" coords="642,509,78" />
+  	  <area class="area" href="#" id="pivotal-roles" shape="circle" coords="807,344,75" />
+  	  <area class="area" href="#" id="people-processes" shape="circle" coords="642,344,105" />
+  	  <area class="area" href="#" id="attract" shape="rect" coords="291,143,504,238" />
+  	  <area class="area" href="#" id="develop" shape="rect" coords="768,142,973,248" />
+  	  <area class="area" href="#" id="retain-reward" shape="rect" coords="765,447,975,559" />
+  	  <area class="area" href="#" id="deploy" shape="rect" coords="297,436,496,549" />
+  	</map>
+	</div><!--end #interactive-->
+
+</div><!-- End content-wrap -->
+
+<script>
+(function( $ ) {
+	$.fn.pwcClick = function(width, height, infoDiv) {
+		$(this).click(function(){
+			var coords = $(this).attr('coords').split(',');
+			var z = coords[2];
+			if (coords[3] ){
+				var x = coords[0];
+				var y = coords[1];
+			}else{
+				var x = coords[0] - z;
+				var y = coords[1] - z;
+			}
+			var div = $(infoDiv);
+			var imgDiv = $('#interactive');
+			div.attr('id','popup')
+			div.appendTo(imgDiv).css({
+				display: 'block',
+				position: 'absolute',
+				height: height,
+				width:	width,
+				border: '1px solid #000',
+				left	: x ,
+				top: y
+			});
+			$("#popup").pwcModal()
+			$('#popup').mouseleave(function(){
+					$('#popup').remove();
+				}) 
+		}).hover(function(){
+			
+			})
+	  };//endfn.pwcClick
+		
+})( jQuery );
+
+$('#potential-talent').pwcClick(130,105, $("#pot-info") );
+$('#pivotal-roles').pwcClick(130,105, $("#pivotal-info") );
+$('#key-skill').pwcClick(130,105, $("#key-skill-info") );
+$('#high-perfomers').pwcClick(130,105, $("#high-info") );
+$('#people-processes').pwcClick(170,170, $("#people-processes-info") );
+
+$('#attract').pwcClick(170,170, $("#attract-info") );
+$('#develop').pwcClick(170,170, $("#develop-info") );
+$('#retain-reward').pwcClick(170,170, $("#retain-reward-info") );
+$('#deploy').pwcClick(170,170, $("#deploy-info") );
+
+</script>
