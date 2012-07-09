@@ -1,9 +1,13 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
 
 
 
 <link type="text/css" href="media/css/ui-lightness/jquery-ui-1.8.21.custom.css" rel="Stylesheet" />	
-<script type="text/javascript" src="media/js/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="media/js/jquery-ui-1.8.21.custom.min.js"></script>
+
 
 
 <style>
@@ -11,34 +15,34 @@
 	#button { padding: .5em 1em; text-decoration: none; }
 	#effect { width: 240px; height: 135px; padding: 0.4em; position: relative; }
 	#effect h3 { margin: 0;
-padding: 1px;
-width: 12px;
-float: right;
-text-align: center;
-height: 12px;
-font-size: 12px;
-line-height: 8px;
-cursor:pointer; }
-	.right{ text-align:right; }
-#overlay{
-	position: absolute;
-	height:100%;
-	background: #E1E1E1;
-	width:  100%;
-	top:0;
-	left:0;
-	}
+	padding: 1px;
+	width: 12px;
+	float: right;
+	text-align: center;
+	height: 12px;
+	font-size: 12px;
+	line-height: 8px;
+	cursor:pointer; }
+		.right{ text-align:right; }
+	#overlay{
+		position: absolute;
+		height:100%;
+		background: #E1E1E1;
+		width:  100%;
+		top:0;
+		left:0;
+		}
 	#modal-box{
-		position: relative;
-		width: 200px;
-		margin: auto auto;
-		top: 20%;
+			position: relative;
+			width: 200px;
+			margin:0 auto;
+			top: 20%;
+		}
+		h3.ui-widget-header{padding: 0 5px;
+		margin: 8px;
+		cursor:pointer;
+		float:right;
 	}
-	h3.ui-widget-header{padding: 0 5px;
-	margin: 8px;
-	cursor:pointer;
-	float:right;
-}
 	#modal-text{
 		padding:10px
 	}
@@ -68,66 +72,12 @@ cursor:pointer; }
 		cursor: pointer;	
 	}
 	</style>
-	<script>
-	
-	(function( $ ) {
-	$.fn.pwcModal = function() {
-		// Do your awesome plugin stuff here
-	
-		// run the currently selected effect
-		function runEffect(text, img) {
-			var overlay = '<div id="overlay"></div>';
-			var modal = $('<div id="modal-box" class="ui-widget-content ui-corner-all"><h3 class="ui-widget-header ui-corner-all right">x</h3> <p id="modal-text">' + text + '</p> </div>');
-			
-			// get effect type from 
-			var selectedEffect = "blind";
-
-			// most effect types need no options passed by default
-			var options = {};
-			
-			$('#content-wrap').append(overlay, modal);
-			$(img).css('display','block')
-			$('#overlay').append(img);
-			
-			$( "h3.ui-widget-header", modal ).click(function(){
-				$(this).parent().remove();
-				$('#overlay').remove();
-			})
-			// some effects have required parameters
-			if ( selectedEffect === "scale" ) {
-				options = { percent: 100 };
-			} else if ( selectedEffect === "size" ) {
-				options = { to: { width: 280, height: 185 } };
-			}
-
-			// run the effect
-			$(modal).show( selectedEffect, options, 500 );
-		};
-		
-		// set effect from select menu value
-			$(this).click(function() {
-				var text = $(this).children('.text').html();
-				var img = $(this).children('.text-image').clone();
-				runEffect(text, img);
-				return false;
-			});
-  };
-})( jQuery );
-
-jQuery(document).ready(function(){
-	$('#one').pwcModal();
-	$('#two').pwcModal();
-	$('#three').pwcModal();
-	$('#four').pwcModal();
-	
-})
-	</script>
-
-
-
+</head>
+<body>
 <div id="content-wrap">
   <div id="interactive" style="position:relative">
-		<img style="position:absolute" id="img-inter" src="onload.jpg" width="1233" height="702" border="0" usemap="#Map" />
+		<img style="position:absolute" id="img-interactive" src="onload.jpg" width="1233" height="702" border="0" usemap="#Map" />
+    
 		<div id="business-value-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
 			<div class='text'>text for 1</div>
 			<div class='text-image'>image for 1</div>
@@ -160,90 +110,61 @@ jQuery(document).ready(function(){
 			<div class='text'>text for 1</div>
 			<div class='text-image'>image for 1</div>
 		</div>
-    <div id="people-processes-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+		<div id="people-processes-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
 			<div class='text'>text for 1</div>
 			<div class='text-image'>image for 1</div>
 		</div>
     
-    <div id="attract-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+		<div id="attract-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
 			<div class='text'>text for 1</div>
 			<div class='text-image'>image for 1</div>
 		</div>
     
-    <div id="develop-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+		<div id="develop-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
 			<div class='text'>text for 1</div>
 			<div class='text-image'>image for 1</div>
 		</div>
     
-    <div id="retain-reward-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+		<div id="retain-reward-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
 			<div class='text'>text for 1</div>
 			<div class='text-image'>image for 1</div>
 		</div>
     
-    <div id="deploy-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+		<div id="deploy-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
 			<div class='text'>text for 1</div>
 			<div class='text-image'>image for 1</div>
 		</div>
-  	<map name="Map" id="Map">
-    	<area class="area" href="#" id="potential-talent" shape="circle" coords="643,181,78"  />
-  	  <area class="area" href="#" id="high-perfomers" shape="circle" coords="478,345,75"/>
-  	  <area class="area" href="#" id="key-skill" shape="circle" coords="642,509,78" />
-  	  <area class="area" href="#" id="pivotal-roles" shape="circle" coords="807,344,75" />
-  	  <area class="area" href="#" id="people-processes" shape="circle" coords="642,344,105" />
-  	  <area class="area" href="#" id="attract" shape="rect" coords="291,143,504,238" />
-  	  <area class="area" href="#" id="develop" shape="rect" coords="768,142,973,248" />
-  	  <area class="area" href="#" id="retain-reward" shape="rect" coords="765,447,975,559" />
-  	  <area class="area" href="#" id="deploy" shape="rect" coords="297,436,496,549" />
-  	</map>
+		<map name="Map" id="Map">
+			<area class="area" href="#" id="potential-talent" shape="circle" coords="643,181,78"  />
+			<area class="area" href="#" id="high-perfomers" shape="circle" coords="478,345,75"/>
+			<area class="area" href="#" id="key-skill" shape="circle" coords="642,509,78" />
+			<area class="area" href="#" id="pivotal-roles" shape="circle" coords="807,344,75" />
+			<area class="area" href="#" id="people-processes" shape="circle" coords="642,344,105" />
+			<area class="area" href="#" id="attract" shape="circ" coords="360,189,50" />
+			<area class="area" href="#" id="develop" shape="circ" coords="908,201,50" />
+			<area class="area" href="#" id="retain-reward" shape="circ" coords="890,498,50" />
+			<area class="area" href="#" id="deploy" shape="circ" coords="378,481,60" />
+		</map>
 	</div><!--end #interactive-->
 
 </div><!-- End content-wrap -->
 
+<script src="media/js/jquery-1.7.2.min.js"></script>
+<script src="media/js/jquery-ui-1.8.21.custom.min.js"></script>
+<script src="media/js/custom_functions.js"></script>
 <script>
-(function( $ ) {
-	$.fn.pwcClick = function(width, height, infoDiv) {
-		$(this).click(function(){
-			var coords = $(this).attr('coords').split(',');
-			var z = coords[2];
-			if (coords[3] ){
-				var x = coords[0];
-				var y = coords[1];
-			}else{
-				var x = coords[0] - z;
-				var y = coords[1] - z;
-			}
-			var div = $(infoDiv);
-			var imgDiv = $('#interactive');
-			div.attr('id','popup')
-			div.appendTo(imgDiv).css({
-				display: 'block',
-				position: 'absolute',
-				height: height,
-				width:	width,
-				border: '1px solid #000',
-				left	: x ,
-				top: y
-			});
-			$("#popup").pwcModal()
-			$('#popup').mouseleave(function(){
-					$('#popup').remove();
-				}) 
-		}).hover(function(){
-			
-			})
-	  };//endfn.pwcClick
-		
-})( jQuery );
+jQuery(document).ready(function($){
+	$('#potential-talent').pwcClick(130,105, $("#pot-info") );
+	$('#pivotal-roles').pwcClick(130,105, $("#pivotal-info") );
+	$('#key-skill').pwcClick(130,105, $("#key-skill-info") );
+	$('#high-perfomers').pwcClick(130,105, $("#high-info") );
+	$('#people-processes').pwcClick(170,170, $("#people-processes-info") );
 
-$('#potential-talent').pwcClick(130,105, $("#pot-info") );
-$('#pivotal-roles').pwcClick(130,105, $("#pivotal-info") );
-$('#key-skill').pwcClick(130,105, $("#key-skill-info") );
-$('#high-perfomers').pwcClick(130,105, $("#high-info") );
-$('#people-processes').pwcClick(170,170, $("#people-processes-info") );
-
-$('#attract').pwcClick(170,170, $("#attract-info") );
-$('#develop').pwcClick(170,170, $("#develop-info") );
-$('#retain-reward').pwcClick(170,170, $("#retain-reward-info") );
-$('#deploy').pwcClick(170,170, $("#deploy-info") );
-
+	$('#attract').pwcClick(170,170, $("#attract-info") );
+	$('#develop').pwcClick(170,170, $("#develop-info") );
+	$('#retain-reward').pwcClick(170,170, $("#retain-reward-info") );
+	$('#deploy').pwcClick(170,170, $("#deploy-info") );
+});//end doc.ready
 </script>
+</body>
+</html>
