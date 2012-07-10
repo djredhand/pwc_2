@@ -139,27 +139,31 @@
 		padding: 5px;
 	}
 	
-	#business-value-info{
-		background: url(business_value_bg.png) no-repeat;
-	}
-	
-	#hr-outcomes-info{
-		background: url(hr_outcomes_bg.png) no-repeat;
-	}
-	
 	#business-strategy-info{
 		background: #fff url(business_strategy_bg.png) no-repeat;
-		margin: 10px 0 0 5px;
+		top: 10px;
+		left: 5px;
 		padding: 80px 5px 0 5px;
 	}
 	
 	#talent-strategy-info{
 		background: url(talent_strategy_bg.png) no-repeat;
 		padding: 125px 20px 0 15px;
-		margin: 10px 0 0 5px;
+		top: 10px;
+		left: 5px;
 	}
-	
-	
+	#hr-outcomes-info{
+		background: url(hr_outcomes_bg.png) no-repeat;
+		padding: 125px 20px 0 15px;
+		top: 29px;
+		left: 635px;
+	}
+	#business-value-info{
+		background: #fff url(business_value_bg.png) no-repeat;
+		top: 33px;
+	left: 615px
+		padding: 80px 5px 0 5px;
+	}
 	h2.interactive{
 		font-size: 18px;
 		padding:0 0 10px 0;
@@ -298,6 +302,8 @@
 			<area class="area" href="#" id="deploy" shape="circ" coords="242,304,50" />
 		  <area id="talent-strategy" shape="rect" coords="100,57,181,391" href="#" />
 		  <area id="business-strategy" shape="rect" coords="6,84,93,361" href="#" />
+		  <area id="hr-outcomes" shape="rect" coords="639,57,717,381" href="#" />
+		  <area id="business-value" shape="rect" coords="727,85,776,360" href="#" />
 		</map>
 	</div><!--end #interactive-->
 
@@ -320,7 +326,8 @@ jQuery(document).ready(function($){
 	$('#deploy').pwcClick(130,135, $("#deploy-info") );
 	$('#talent-strategy').pwcClick(170,290, $("#talent-strategy-info") );
 	$('#business-strategy').pwcClick(170,410, $("#business-strategy-info") );
-
+	$('#hr-outcomes').pwcClick(170,290, $("#hr-outcomes-info") );
+	$('#business-value').pwcClick(170,410, $("#business-value-info") );
 	
 });//end doc.ready
 </script>
