@@ -11,6 +11,10 @@
 
 
 <style>
+	body{
+		margin:0;
+		padding:0;
+	}
 	.toggler { width: 500px; height: 200px; }
 	#button { padding: .5em 1em; text-decoration: none; }
 	#effect { width: 240px; height: 135px; padding: 0.4em; position: relative; }
@@ -38,7 +42,8 @@
 			margin:0 auto;
 			top: 20%;
 		}
-		h3.ui-widget-header{padding: 0 5px;
+		h3.ui-widget-header{
+		padding: 0 5px;
 		margin: 8px;
 		cursor:pointer;
 		float:right;
@@ -47,10 +52,9 @@
 		padding:10px
 	}
 	#content-wrap{
-		width:1233px;
-		height:600px;
+		width:768px;
+		height:441px;
 		position:relative;
-		border:1px solid #333
 	}
 	.text{
 		display:none;
@@ -65,85 +69,235 @@
 		display:none;	
 	}
 	.popup{
-		cursor:pointer;
-		font-family:Georgia, "Times New Roman", Times, serif
+		cursor: pointer;
+		font-family: arial;
+		font-size: 12px;
+		font-weight: bold;
+		color: #333;
 	}
 	.area{
 		cursor: pointer;	
+	}
+	#pivotal-info{
+		background: url(pivotal_roll_bg.png) no-repeat;
+		padding: 43px 0 0 0px;
+		margin: -12px 0 0 -11px;
+		text-align: center;
+	}
+	
+	#key-skill-info{
+		background: url(key_skills_bg.png) no-repeat;
+		padding: 43px 0 0 0px;
+		margin: -12px 0 0 -11px;
+		text-align: center;
+	}
+	
+	#high-info{
+		background: url(high_performers_bg.png) no-repeat;
+		padding: 43px 0 0 0px;
+		margin: -12px 0 0 -11px;
+		text-align: center;
+	}
+	
+	#pot-info{
+		background: url(potential_talent_bg.png) no-repeat;
+		padding: 48px 0 0 0px;
+		margin: -12px 0 0 -11px;
+		text-align: center;
+	}
+	
+	#pivotal-info{
+		background: url(pivotal_roll_bg.png) no-repeat;
+		padding: 48px 0 0 2px
+		margin: -12px 0 0 -11px;
+		text-align: center;
+	
+	}
+	#people-processes-info{
+		background: url(people_processes_bg.png) no-repeat;
+		padding: 73px 0 0 0px;
+		margin: -1px 0 0 -3px;
+		text-align: center;
+	}
+	#develop-info{
+		background: white;
+		margin: -41px 0 0 -62px;
+		padding: 5px;
+	}
+	#retain-reward-info{
+		background: white;
+		margin: 10px 0 0 -30px;
+		padding: 0 0 0 5px;
+	}
+	#deploy-info{
+		background: #fff;
+		margin: 15px 0 0 0px;
+	}
+	#attract-info{
+		background:#fff;
+		margin:-36px 0 0 0;
+		padding: 5px;
+	}
+	
+	#business-value-info{
+		background: url(business_value_bg.png) no-repeat;
+	}
+	
+	#hr-outcomes-info{
+		background: url(hr_outcomes_bg.png) no-repeat;
+	}
+	
+	#business-strategy-info{
+		background: #fff url(business_strategy_bg.png) no-repeat;
+		margin: 10px 0 0 5px;
+		padding: 80px 5px 0 5px;
+	}
+	
+	#talent-strategy-info{
+		background: url(talent_strategy_bg.png) no-repeat;
+		padding: 125px 20px 0 15px;
+		margin: 10px 0 0 5px;
+	}
+	
+	
+	h2.interactive{
+		font-size: 18px;
+		padding:0 0 10px 0;
+		margin:0;
+		text-align:center;
+		color:#444;
 	}
 	</style>
 </head>
 <body>
 <div id="content-wrap">
   <div id="interactive" style="position:relative">
-		<img style="position:absolute" id="img-interactive" src="onload.jpg" width="1233" height="702" border="0" usemap="#Map" />
+		<img style="position:absolute" id="img-interactive" src="onload.jpg" width="786" height="441" border="0" usemap="#Map" />
     
-		<div id="business-value-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+		<div id="business-value-info" class="hide popup">
+			&bull;  Manage risk of capability gaps<br/>
+			&bull;  Sustainable business leadership<br/>
+			&bull;  Focus investment in talent<br/>
+			&bull;  Compete effectively for talent<br/>
+			&bull;  Employer reputation<br/>
+			&bull;  Leverage innovation<br/>
 			<div class='text'>text for 1</div>
 			<div class='text-image'>image for 1</div>
 		</div>
-		<div id="hr-outcomes-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+		<div id="hr-outcomes-info" class="hide popup">
+			&bull;  Focused talent investment, processes and programs<br/>
+			&bull;  Activity aligned directly to business plan<br/>
+			&bull;  Improved governance and reporting on talent<br/>
+			&bull;  Increases employee engagement<br/>
+			&bull;  Increased performance<br/>
+			&bull;  Diversity<br/>
+			&bull;  Increased leadership effectiveness<br/>
+			&bull;  Improved Talent retention<br/>
+			&bull;  Enhanced development of key talent<br/>
+			&bull;  Managed succession for critical roles<br/>
+			&bull;  Management of critical roles<br/>
+			&bull;  Culutre of innovation <br/>
+			&bull;  Learning organisational culture<br/>
+			&bull;  Employee communication &amp; recognition<br/>
 			<div class='text'>text for 1</div>
 			<div class='text-image'>image for 1</div>
 		</div>
-		<div id="talent-strategy-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+		<div id="talent-strategy-info" class="hide popup">
+			&bull;  Key business priorities for people, talent, and business change<br/>
+			&bull;  The employee experience<br/>
+			&bull;  Detailed future workforce scenario analysis and workforce requirements forecasting based on business strategy and plan<br/>
+			&bull;  Detailed workforce plan aligned to business plan<br/>
 			<div class='text'>text for 1</div>
 			<div class='text-image'>image for 1</div>
 		</div>
-		<div id="business-strategy-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+		<div id="business-strategy-info" class="hide popup">
+			&bull;  Growth<br/>
+			&bull;  Emerging markets<br/>
+			&bull;  Innovation<br/>
+			&bull;  Regulation, compliance &amp; risk<br/>
+			&bull;  Reduce costs<br/>
+			&bull;  Operational efficiency<br/>
+			&bull;  Transactions<br/>
 			<div class='text'>text for 1</div>
 			<div class='text-image'>image for 1</div>
 		</div>
-		<div id="pot-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+		<div id="pot-info" class="hide popup">Future talent sourcing and high potentials
 			<div class='text'>text for 1</div>
 			<div class='text-image'>image for 1</div>
 		</div>
-		<div id="pivotal-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+		<div id="pivotal-info" class="hide popup">Key roles that <br/>create<br/> (or destroy)<br/> value
 			<div class='text'>text for pivotal info</div>
 			<div class='text-image'>image for pivotal info</div>
 		</div>
-		<div id="key-skill-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+		<div id="key-skill-info" class="hide popup">Experience and expertise
 			<div class='text'>text for 1</div>
 			<div class='text-image'>image for 1</div>
 		</div>
-		<div id="high-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+		<div id="high-info" class="hide popup">Talent that<br/> drives high <br/>performing <br/>culture
 			<div class='text'>text for 1</div>
 			<div class='text-image'>image for 1</div>
 		</div>
-		<div id="people-processes-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
-			<div class='text'>text for 1</div>
-			<div class='text-image'>image for 1</div>
-		</div>
-    
-		<div id="attract-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
-			<div class='text'>text for 1</div>
-			<div class='text-image'>image for 1</div>
-		</div>
-    
-		<div id="develop-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+		<div id="people-processes-info" class="hide popup">
+			&bull; HR function<br/>
+			&bull; Organization design<br/>
+			&bull; Communications<br/>
+			&bull; People managemnet<br/>
+			&bull; HR systems<br/>
 			<div class='text'>text for 1</div>
 			<div class='text-image'>image for 1</div>
 		</div>
     
-		<div id="retain-reward-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+		<div id="attract-info" class="hide popup">
+			<h2 class="interactive">Attract</h2>
+			&bull;  Employer brand<br/>
+			&bull;  Employee value proposition<br/>
+			&bull;  Talent sourcing<br/>
+			&bull;  Workforce planning<br/>
+			&bull;  Diversity<br/>
 			<div class='text'>text for 1</div>
 			<div class='text-image'>image for 1</div>
 		</div>
     
-		<div id="deploy-info" class="hide popup" style="padding:50px 0 0 35px">This is the info
+		<div id="develop-info" class="hide popup">
+			<h2 class="interactive">Develop</h2>
+			&bull;  Leadership development<br/>
+			&bull;  Coaching and mentoring<br/>
+			&bull;  Technical and function learning<br/>
+			&bull;  Performance management<br/>
+			<div class='text'>text for 1</div>
+			<div class='text-image'>image for 1</div>
+		</div>
+    
+		<div id="retain-reward-info" class="hide popup">
+			<h2 class="interactive">Retain and Reward</h2>
+			&bull;  Engagement and culture<br/>
+			&bull;  Total reward, pension and incentives<br/>
+			&bull;  Recognition<br/>
+			<div class='text'>text for 1</div>
+			<div class='text-image'>image for 1</div>
+		</div>
+    
+		<div id="deploy-info" class="hide popup">
+			<h2 class="interactive">Deploy</h2>
+			&bull;  International mobility<br/>
+			&bull;  Succession planning<br/>
+			&bull;  Cycles of experience<br/>
+			&bull;  Restruction<br/>
 			<div class='text'>text for 1</div>
 			<div class='text-image'>image for 1</div>
 		</div>
 		<map name="Map" id="Map">
-			<area class="area" href="#" id="potential-talent" shape="circle" coords="643,181,78"  />
-			<area class="area" href="#" id="high-perfomers" shape="circle" coords="478,345,75"/>
-			<area class="area" href="#" id="key-skill" shape="circle" coords="642,509,78" />
-			<area class="area" href="#" id="pivotal-roles" shape="circle" coords="807,344,75" />
-			<area class="area" href="#" id="people-processes" shape="circle" coords="642,344,105" />
-			<area class="area" href="#" id="attract" shape="circ" coords="360,189,50" />
-			<area class="area" href="#" id="develop" shape="circ" coords="908,201,50" />
-			<area class="area" href="#" id="retain-reward" shape="circ" coords="890,498,50" />
-			<area class="area" href="#" id="deploy" shape="circ" coords="378,481,60" />
+			<area class="area" href="#" id="potential-talent" shape="circle" coords="409,116,48"  />
+			<area class="area" href="#" id="high-perfomers" shape="circle" coords="305,219,48"/>
+			<area class="area" href="#" id="key-skill" shape="circle" coords="409,321,48" />
+			<area class="area" href="#" id="pivotal-roles" shape="circle" coords="515,219,48" />
+			<area class="area" href="#" id="people-processes" shape="circle" coords="410,218,88" />
+			<area class="area" href="#" id="attract" shape="circ" coords="236,126,50" />
+			<area class="area" href="#" id="develop" shape="circ" coords="574,119,40" />
+			<area class="area" href="#" id="retain-reward" shape="circ" coords="566,313,50" />
+			<area class="area" href="#" id="deploy" shape="circ" coords="242,304,50" />
+		  <area id="talent-strategy" shape="rect" coords="100,57,181,391" href="#" />
+		  <area id="business-strategy" shape="rect" coords="6,84,93,361" href="#" />
 		</map>
 	</div><!--end #interactive-->
 
@@ -154,16 +308,20 @@
 <script src="media/js/custom_functions.js"></script>
 <script>
 jQuery(document).ready(function($){
-	$('#potential-talent').pwcClick(130,105, $("#pot-info") );
-	$('#pivotal-roles').pwcClick(130,105, $("#pivotal-info") );
-	$('#key-skill').pwcClick(130,105, $("#key-skill-info") );
-	$('#high-perfomers').pwcClick(130,105, $("#high-info") );
-	$('#people-processes').pwcClick(170,170, $("#people-processes-info") );
+	$('#potential-talent').pwcClick(118,75, $("#pot-info") );
+	$('#pivotal-roles').pwcClick(118,75, $("#pivotal-info") );
+	$('#key-skill').pwcClick(118,75, $("#key-skill-info") );
+	$('#high-perfomers').pwcClick(118,75, $("#high-info") );
+	$('#people-processes').pwcClick(180,107, $("#people-processes-info") );
 
-	$('#attract').pwcClick(170,170, $("#attract-info") );
-	$('#develop').pwcClick(170,170, $("#develop-info") );
-	$('#retain-reward').pwcClick(170,170, $("#retain-reward-info") );
-	$('#deploy').pwcClick(170,170, $("#deploy-info") );
+	$('#attract').pwcClick(120,120, $("#attract-info") );
+	$('#develop').pwcClick(153,110, $("#develop-info") );
+	$('#retain-reward').pwcClick(145,120, $("#retain-reward-info") );
+	$('#deploy').pwcClick(130,135, $("#deploy-info") );
+	$('#talent-strategy').pwcClick(170,290, $("#talent-strategy-info") );
+	$('#business-strategy').pwcClick(170,410, $("#business-strategy-info") );
+
+	
 });//end doc.ready
 </script>
 </body>

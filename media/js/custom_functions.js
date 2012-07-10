@@ -69,7 +69,6 @@
 				position: 'absolute',
 				height: height,
 				width:	width,
-				border: '1px solid #000',
 				left	: x,
 				top: y
 			});
